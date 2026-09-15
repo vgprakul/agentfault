@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "number_of_overlaps": 0,
+  "overlap_examples": [],
+  "issues": [],
+  "manifest_trajectories": 100,
+  "split_trajectory_counts": {
+    "train": 70,
+    "validation": 15,
+    "test": 15
+  },
+  "split_task_counts": {
+    "test": 15,
+    "train": 70,
+    "validation": 15
+  }
+}

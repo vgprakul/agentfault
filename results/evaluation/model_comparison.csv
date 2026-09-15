@@ -1,0 +1,7 @@
+model,validation_accuracy,validation_macro_precision,validation_macro_recall,validation_macro_f1,validation_weighted_f1,parameters,module,selection_metric,selected,validation_exact_step_accuracy,validation_top3_accuracy,validation_mrr,validation_mean_absolute_step_distance
+Logistic Regression,0.7333333333333333,0.75,0.7916666666666666,0.753968253968254,0.6952380952380952,{'C': 1.0},taxonomy,validation_macro_f1,False,,,,
+Random Forest,0.8,0.75,0.8333333333333334,0.7777777777777777,0.7333333333333333,"{'n_estimators': 250, 'max_depth': None, 'min_samples_split': 4, 'class_weight': 'balanced'}",taxonomy,validation_macro_f1,True,,,,
+XGBoost,0.8,0.75,0.8333333333333334,0.7777777777777777,0.7333333333333333,"{'n_estimators': 100, 'max_depth': 2, 'learning_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.9}",taxonomy,validation_macro_f1,False,,,,
+Logistic Regression,,,,,,{'C': 1.0},localizer,validation_mrr,False,0.4666666666666667,0.7333333333333333,0.6285714285714284,0.8666666666666667
+Random Forest,,,,,,"{'n_estimators': 250, 'max_depth': None, 'min_samples_leaf': 1, 'class_weight': 'balanced'}",localizer,validation_mrr,False,0.6,0.6666666666666666,0.7077777777777777,0.7333333333333333
+XGBoost,,,,,,"{'n_estimators': 150, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9, 'scale_pos_weight': 7.171428571428572}",localizer,validation_mrr,True,0.6,0.8666666666666667,0.7244444444444444,0.7333333333333333

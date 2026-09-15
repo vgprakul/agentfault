@@ -1,0 +1,4 @@
+length_group,trajectories,exact_step_accuracy,top3_accuracy,mrr,mean_absolute_step_distance,minimum_steps,maximum_steps
+short,2,0.0,1.0,0.3333333333333333,2.0,7,7
+medium,10,0.8,0.9,0.8666666666666668,0.4,8,8
+long,3,0.3333333333333333,1.0,0.5555555555555555,1.3333333333333333,10,10

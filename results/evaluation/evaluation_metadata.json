@@ -1,0 +1,106 @@
+{
+  "timestamp_utc": "2026-09-15T13:54:30.788212+00:00",
+  "random_seed": 42,
+  "git_commit": "cf529ec01ffd7d9735ba9b37bbc3e0f1c0e3b33c",
+  "paths": {
+    "taxonomy_model": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\models\\taxonomy\\best_model.joblib",
+    "localizer_model": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\models\\localizer\\best_localizer.joblib",
+    "trajectory_features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\trajectory_features.csv",
+    "step_features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\step_features.csv",
+    "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\split_manifest.csv",
+    "taxonomy_predictions": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\results\\taxonomy\\test_predictions.csv",
+    "localizer_predictions": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\results\\localizer\\test_step_predictions.csv"
+  },
+  "sha256": {
+    "taxonomy_model": "f8cc0d76411b276ebe5c9176b26870bfbda52c1c9b7dcb0b30a0034278d4d9e2",
+    "localizer_model": "97720c7523b828b0b871c2d3ab6396bd949c240af47035af167fba939dc1796a",
+    "trajectory_features": "41afbc21e2449fd9cfebd01633ef385e79fcab76bd91689b24476f28e30ffc05",
+    "step_features": "cc76db6a9ab9896405663796997bc74d7d25f4a91b17bb061fc2a65a315fe5d7",
+    "manifest": "4770ad3adce7021d3660688b909396d81090e8e8d13812f671989b5d42a7580c",
+    "taxonomy_predictions": "50048e159fd468af9cd97597470be6292fa329dff5b55913faf7ffc6ffdb780c",
+    "localizer_predictions": "11f7d8cca265aadf015fe0f3f4c7961f8eb513ba5e264e056f9c5b54451c5b3f"
+  },
+  "dataset_counts": {
+    "taxonomy": {
+      "loaded_rows": 100,
+      "usable_rows": 100,
+      "excluded_unlabelled_or_clean": 0,
+      "class_distribution": {
+        "train": {
+          "PLANNING": 13,
+          "TOOL": 14,
+          "KNOWLEDGE": 9,
+          "MULTI_AGENT": 14,
+          "CONTROL": 9,
+          "SECURITY": 11
+        },
+        "validation": {
+          "PLANNING": 1,
+          "TOOL": 3,
+          "KNOWLEDGE": 4,
+          "MULTI_AGENT": 3,
+          "CONTROL": 1,
+          "SECURITY": 3
+        },
+        "test": {
+          "PLANNING": 1,
+          "TOOL": 3,
+          "KNOWLEDGE": 2,
+          "MULTI_AGENT": 3,
+          "CONTROL": 5,
+          "SECURITY": 1
+        }
+      },
+      "split_counts": {
+        "train": 70,
+        "validation": 15,
+        "test": 15
+      }
+    },
+    "localizer": {
+      "loaded_step_rows": 815,
+      "loaded_trajectories": 100,
+      "faulty_trajectories": 100,
+      "usable_faulty_trajectories": 100,
+      "clean_trajectories": 0,
+      "missing_root_cause_labels": 0,
+      "invalid_trajectories": 0,
+      "multiple_positive_trajectories": 0,
+      "unknown_fault_status_trajectories": 0,
+      "issues": [],
+      "usable_step_rows": 815,
+      "positive_steps": 100,
+      "negative_steps": 715,
+      "split_counts": {
+        "train": {
+          "trajectories": 70,
+          "steps": 572,
+          "positive_steps": 70,
+          "negative_steps": 502
+        },
+        "validation": {
+          "trajectories": 15,
+          "steps": 119,
+          "positive_steps": 15,
+          "negative_steps": 104
+        },
+        "test": {
+          "trajectories": 15,
+          "steps": 124,
+          "positive_steps": 15,
+          "negative_steps": 109
+        }
+      }
+    }
+  },
+  "classes_evaluated": [
+    "PLANNING",
+    "TOOL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "CONTROL",
+    "SECURITY"
+  ],
+  "missing_comparison_files": [],
+  "prediction_policy": "Existing predictions verified against frozen models and current labels; no model fitting"
+}

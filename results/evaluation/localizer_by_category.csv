@@ -1,0 +1,7 @@
+category,trajectories,exact_step_accuracy,top3_accuracy,mrr,mean_absolute_step_distance
+CONTROL,5,0.2,1.0,0.4666666666666666,1.6
+KNOWLEDGE,2,1.0,1.0,1.0,0.0
+MULTI_AGENT,3,0.6666666666666666,1.0,0.8333333333333334,1.0
+PLANNING,1,1.0,1.0,1.0,0.0
+SECURITY,1,0.0,0.0,0.16666666666666666,1.0
+TOOL,3,1.0,1.0,1.0,0.0

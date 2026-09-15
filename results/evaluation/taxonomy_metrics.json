@@ -1,0 +1,298 @@
+{
+  "accuracy": 0.8666666666666667,
+  "macro_precision": 0.7666666666666666,
+  "macro_recall": 0.7777777777777777,
+  "macro_f1": 0.7583333333333333,
+  "weighted_f1": 0.8433333333333334,
+  "metric_labels": [
+    "PLANNING",
+    "TOOL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "CONTROL",
+    "SECURITY"
+  ],
+  "per_class": {
+    "PLANNING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "TOOL": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.8,
+      "support": 3.0
+    },
+    "KNOWLEDGE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "MULTI_AGENT": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1-score": 0.75,
+      "support": 3.0
+    },
+    "CONTROL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "SECURITY": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    }
+  },
+  "weighted_precision": 0.8533333333333334,
+  "weighted_recall": 0.8666666666666667,
+  "classes_evaluated": [
+    "PLANNING",
+    "TOOL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "CONTROL",
+    "SECURITY"
+  ],
+  "confusion_matrix_labels": [
+    "PLANNING",
+    "TOOL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "CONTROL",
+    "SECURITY"
+  ],
+  "confusion_matrix": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "samples": 15,
+  "probability_metrics": {
+    "log_loss": 0.4472359898916405,
+    "ovr_roc_auc": 0.978835978835979,
+    "ovr_pr_auc": 0.8444444444444444,
+    "per_class_roc_auc": {
+      "CONTROL": 1.0,
+      "KNOWLEDGE": 1.0,
+      "MULTI_AGENT": 0.9722222222222222,
+      "PLANNING": 1.0,
+      "SECURITY": 0.9285714285714286,
+      "TOOL": 0.9722222222222222
+    },
+    "per_class_pr_auc": {
+      "CONTROL": 1.0,
+      "KNOWLEDGE": 1.0,
+      "MULTI_AGENT": 0.8666666666666667,
+      "PLANNING": 1.0,
+      "SECURITY": 0.3333333333333333,
+      "TOOL": 0.8666666666666667
+    },
+    "probability_classes": [
+      "CONTROL",
+      "KNOWLEDGE",
+      "MULTI_AGENT",
+      "PLANNING",
+      "SECURITY",
+      "TOOL"
+    ],
+    "aggregation": "Macro mean over valid one-vs-rest classes only; PR-AUC is average precision",
+    "skipped": {}
+  },
+  "confidence_analysis": {
+    "average_confidence_correct": 0.7883519000156871,
+    "average_confidence_incorrect": 0.5659865219891754,
+    "buckets": [
+      {
+        "bucket": "0.0-0.2",
+        "count": 0,
+        "accuracy": null
+      },
+      {
+        "bucket": "0.2-0.4",
+        "count": 0,
+        "accuracy": null
+      },
+      {
+        "bucket": "0.4-0.6",
+        "count": 4,
+        "accuracy": 0.5
+      },
+      {
+        "bucket": "0.6-0.8",
+        "count": 6,
+        "accuracy": 1.0
+      },
+      {
+        "bucket": "0.8-1.0",
+        "count": 5,
+        "accuracy": 1.0
+      }
+    ],
+    "bucket_rule": "left inclusive, right exclusive; last bucket includes 1.0"
+  },
+  "subtype": {
+    "unavailable_models": {
+      "SECURITY": "Requires >=6 training rows, >=2 subtype classes and >=2 rows in every observed subtype"
+    },
+    "accuracy": 0.6666666666666666,
+    "macro_precision": 0.7272727272727273,
+    "macro_recall": 0.6666666666666666,
+    "macro_f1": 0.6818181818181818,
+    "weighted_f1": 0.7,
+    "metric_labels": [
+      "CTRL_LOOP",
+      "CTRL_PREMATURE_TERMINATION",
+      "KNOW_CITATION_MISMATCH",
+      "KNOW_CONTEXT_TRUNCATION",
+      "MA_INFORMATION_LOSS",
+      "MA_ROLE_OVERLAP",
+      "PLAN_INCORRECT_SUCCESS_CRITERIA",
+      "SEC_PROMPT_INJECTION",
+      "TOOL_FAILED_RECOVERY",
+      "TOOL_WRONG_ARGUMENT",
+      "TOOL_WRONG_TOOL"
+    ],
+    "per_class": {
+      "CTRL_LOOP": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.5,
+        "support": 3.0
+      },
+      "CTRL_PREMATURE_TERMINATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "KNOW_CITATION_MISMATCH": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "KNOW_CONTEXT_TRUNCATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "MA_INFORMATION_LOSS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "MA_ROLE_OVERLAP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "PLAN_INCORRECT_SUCCESS_CRITERIA": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "SEC_PROMPT_INJECTION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "TOOL_FAILED_RECOVERY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "TOOL_WRONG_ARGUMENT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "TOOL_WRONG_TOOL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      }
+    },
+    "weighted_precision": 0.8,
+    "weighted_recall": 0.6666666666666666,
+    "classes_evaluated": [
+      "CTRL_LOOP",
+      "CTRL_PREMATURE_TERMINATION",
+      "KNOW_CITATION_MISMATCH",
+      "KNOW_CONTEXT_TRUNCATION",
+      "MA_INFORMATION_LOSS",
+      "MA_ROLE_OVERLAP",
+      "PLAN_INCORRECT_SUCCESS_CRITERIA",
+      "SEC_PROMPT_INJECTION",
+      "TOOL_FAILED_RECOVERY",
+      "TOOL_WRONG_ARGUMENT",
+      "TOOL_WRONG_TOOL"
+    ],
+    "evaluated_samples": 15,
+    "category_only_accuracy": 0.8666666666666667,
+    "conditional_on_correct_category_accuracy": 0.7692307692307693,
+    "conditional_sample_count": 13,
+    "hierarchical_accuracy": 0.6666666666666666,
+    "prediction_coverage": 1.0,
+    "denominator_note": "Subtype macro metrics use only subtypes present in ground truth in this split; unavailable predictions count as incorrect"
+  }
+}

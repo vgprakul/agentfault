@@ -1,0 +1,125 @@
+{
+  "taxonomy_classifier": {
+    "best_model": "Random Forest",
+    "test_samples": 15,
+    "accuracy": 0.8666666666666667,
+    "macro_f1": 0.7583333333333333,
+    "weighted_f1": 0.8433333333333334
+  },
+  "root_cause_localizer": {
+    "best_model": "XGBoost",
+    "test_trajectories": 15,
+    "exact_step_accuracy": 0.6,
+    "top3_accuracy": 0.9333333333333333,
+    "top5_accuracy": 0.9333333333333333,
+    "mrr": 0.7333333333333333,
+    "mean_absolute_step_distance": 0.8,
+    "median_absolute_step_distance": 0.0
+  },
+  "baselines": {
+    "taxonomy_majority": {
+      "accuracy": 0.2,
+      "macro_precision": 0.03333333333333333,
+      "macro_recall": 0.16666666666666666,
+      "macro_f1": 0.05555555555555555,
+      "weighted_f1": 0.06666666666666667,
+      "metric_labels": [
+        "PLANNING",
+        "TOOL",
+        "KNOWLEDGE",
+        "MULTI_AGENT",
+        "CONTROL",
+        "SECURITY"
+      ],
+      "per_class": {
+        "PLANNING": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "TOOL": {
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1-score": 0.3333333333333333,
+          "support": 3.0
+        },
+        "KNOWLEDGE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "MULTI_AGENT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "CONTROL": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "SECURITY": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        }
+      },
+      "weighted_precision": 0.04000000000000001,
+      "weighted_recall": 0.2,
+      "classes_evaluated": [
+        "PLANNING",
+        "TOOL",
+        "KNOWLEDGE",
+        "MULTI_AGENT",
+        "CONTROL",
+        "SECURITY"
+      ],
+      "majority_class": "TOOL",
+      "tie_rule": "existing CATEGORIES order; training counts only"
+    },
+    "random_step": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.0,
+      "top3_accuracy": 0.2,
+      "mrr": 0.2367460317460317,
+      "mean_absolute_step_distance": 2.7333333333333334,
+      "top5_accuracy": 0.4,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending",
+      "baseline_seed": 42
+    },
+    "earliest_step": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.06666666666666667,
+      "top3_accuracy": 0.13333333333333333,
+      "mrr": 0.24936507936507937,
+      "mean_absolute_step_distance": 4.4,
+      "top5_accuracy": 0.4666666666666667,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending",
+      "baseline_seed": null
+    }
+  },
+  "split_integrity": {
+    "valid": true,
+    "number_of_overlaps": 0,
+    "overlap_examples": [],
+    "issues": [],
+    "manifest_trajectories": 100,
+    "split_trajectory_counts": {
+      "train": 70,
+      "validation": 15,
+      "test": 15
+    },
+    "split_task_counts": {
+      "test": 15,
+      "train": 70,
+      "validation": 15
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "taxonomy": {
+    "suspicious_feature_names": [],
+    "top_feature_importances": [
+      {
+        "feature": "numeric__average_step_output_length",
+        "importance": 0.14367958025665184
+      },
+      {
+        "feature": "numeric__total_output_chars",
+        "importance": 0.13606182120292765
+      },
+      {
+        "feature": "numeric__average_step_input_length",
+        "importance": 0.09496849036020905
+      },
+      {
+        "feature": "numeric__total_input_chars",
+        "importance": 0.08247843240450227
+      },
+      {
+        "feature": "numeric__avg_consecutive_step_similarity",
+        "importance": 0.035351987473854575
+      },
+      {
+        "feature": "numeric__semantic_drift_slope",
+        "importance": 0.03199022231328532
+      },
+      {
+        "feature": "numeric__total_input_words",
+        "importance": 0.03131327350737022
+      },
+      {
+        "feature": "numeric__total_output_words",
+        "importance": 0.027746795929894087
+      },
+      {
+        "feature": "numeric__total_steps",
+        "importance": 0.025868454817916206
+      },
+      {
+        "feature": "numeric__avg_task_step_similarity",
+        "importance": 0.02310020210369286
+      },
+      {
+        "feature": "numeric__handoffs_per_step",
+        "importance": 0.020014175034161266
+      },
+      {
+        "feature": "numeric__first_error_step_position",
+        "importance": 0.018203764174957865
+      },
+      {
+        "feature": "numeric__max_step_output_length",
+        "importance": 0.01771098006147563
+      },
+      {
+        "feature": "numeric__consecutive_identical_action_max",
+        "importance": 0.01651919875520382
+      },
+      {
+        "feature": "numeric__avg_semantic_drift",
+        "importance": 0.015766451251699048
+      }
+    ],
+    "matching_test_vectors": 13,
+    "test_vectors": 15,
+    "warnings": [
+      "13/15 test predictor vectors also occur in training despite task grouping.",
+      "Four payload-size features contribute 45.7% of importance and may expose injection/template patterns."
+    ]
+  },
+  "localizer": {
+    "suspicious_feature_names": [],
+    "top_feature_importances": [
+      {
+        "feature": "numeric__previous_step_same_type",
+        "importance": 0.1283811628818512
+      },
+      {
+        "feature": "categorical__status_ERROR",
+        "importance": 0.09831567853689194
+      },
+      {
+        "feature": "numeric__previous_step_same_agent",
+        "importance": 0.07389942556619644
+      },
+      {
+        "feature": "numeric__has_error",
+        "importance": 0.07190988957881927
+      },
+      {
+        "feature": "numeric__output_length_chars",
+        "importance": 0.05696989968419075
+      },
+      {
+        "feature": "numeric__output_length_words",
+        "importance": 0.04970884695649147
+      },
+      {
+        "feature": "categorical__agent_id_wrong_agent",
+        "importance": 0.049311596900224686
+      },
+      {
+        "feature": "numeric__input_length_chars",
+        "importance": 0.047966863960027695
+      },
+      {
+        "feature": "categorical__agent_id_researcher",
+        "importance": 0.04747925326228142
+      },
+      {
+        "feature": "numeric__input_length_words",
+        "importance": 0.04637419804930687
+      },
+      {
+        "feature": "categorical__tool_name_calculator",
+        "importance": 0.04163685441017151
+      },
+      {
+        "feature": "numeric__previous_step_similarity",
+        "importance": 0.0411776602268219
+      },
+      {
+        "feature": "numeric__cumulative_handoffs",
+        "importance": 0.03854828700423241
+      },
+      {
+        "feature": "numeric__is_llm_step",
+        "importance": 0.0262481439858675
+      },
+      {
+        "feature": "categorical__tool_name_wrong_tool",
+        "importance": 0.024980442598462105
+      }
+    ],
+    "matching_test_vectors": 120,
+    "test_vectors": 124,
+    "warnings": [
+      "120/124 test predictor vectors also occur in training despite task grouping.",
+      "Observable synthetic sentinel values among top features: categorical__agent_id_wrong_agent, categorical__tool_name_wrong_tool"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+module,model,accuracy,macro_f1,exact_step_accuracy,top3_accuracy,top5_accuracy,mrr,mean_absolute_step_distance
+taxonomy,Trained Random Forest,0.8666666666666667,0.7583333333333333,,,,,
+taxonomy,Majority: TOOL,0.2,0.05555555555555555,,,,,
+localizer,Trained XGBoost,,,0.6,0.9333333333333333,0.9333333333333333,0.7333333333333333,0.8
+localizer,Random step,,,0.0,0.2,0.4,0.2367460317460317,2.7333333333333334
+localizer,Earliest step,,,0.06666666666666667,0.13333333333333333,0.4666666666666667,0.24936507936507937,4.4

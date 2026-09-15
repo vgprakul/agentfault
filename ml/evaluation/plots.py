@@ -11,6 +11,36 @@ def finish(fig,path):
     plt.close(fig)
 
 
+def summary_plot(summary, output):
+    """Plot existing held-out metrics without recomputing or changing them."""
+    panels = [
+        ('taxonomy_classifier', 'Taxonomy classifier',
+         [('accuracy', 'Accuracy'), ('macro_f1', 'Macro-F1'), ('weighted_f1', 'Weighted-F1')]),
+        ('root_cause_localizer', 'Root-cause localizer',
+         [('exact_step_accuracy', 'Exact step'), ('top3_accuracy', 'Top-3'), ('mrr', 'MRR')]),
+    ]
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+    for ax, (key, title, metrics), color in zip(axes, panels, ['#3478ac', '#348b73']):
+        values = summary[key]
+        available = [(label, values.get(name)) for name, label in metrics
+                     if values.get(name) is not None]
+        bars = ax.bar([label for label, _ in available],
+                      [value for _, value in available], color=color, width=.6)
+        ax.bar_label(bars, fmt='%.3f', padding=4)
+        ax.set(ylim=(0, 1.12), ylabel='Held-out test score (0–1)',
+               title=f"{title}\n{values['best_model']}")
+        ax.set_axisbelow(True)
+        ax.grid(axis='y', alpha=.2)
+    fig.suptitle('AgentFault ML Evaluation', fontsize=16)
+    fig.text(.5, .01, 'Different tasks and metrics; bar heights are not a direct comparison between modules.',
+             ha='center', fontsize=9)
+    fig.tight_layout(rect=(0, .05, 1, .94))
+    path = output / 'ml_evaluation_summary.png'
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+    return path
+
+
 def taxonomy_plots(metrics,output):
     matrix=np.array(metrics['confusion_matrix'])
     labels=metrics['confusion_matrix_labels']

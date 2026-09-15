@@ -1,0 +1,45 @@
+{
+  "trajectory_id": "traj_19bc05a7",
+  "failure_detected": false,
+  "failure_probability": 0.004361688025066175,
+  "predicted_category": null,
+  "predicted_subtype": null,
+  "predicted_root_cause_step": null,
+  "root_cause_confidence": null,
+  "ranked_suspicious_steps": [],
+  "taxonomy_result": null,
+  "ranked_hypotheses": [],
+  "selected_hypothesis": null,
+  "selected_evidence_step": null,
+  "propagation_chain": [],
+  "diagnosis_confidence": null,
+  "counterfactual_status": "NOT_RUN",
+  "replay_request": null,
+  "replay_interpretation": null,
+  "recommended_next_action": null,
+  "reasons": [],
+  "configuration": {
+    "top_k": 3,
+    "failure_threshold": 0.5,
+    "category_threshold": 0.5,
+    "localization_threshold": 0.5,
+    "hypothesis_threshold": 0.5,
+    "tie_tolerance": 0.01,
+    "weights": {
+      "localization": 0.5,
+      "taxonomy": 0.25,
+      "evidence": 0.15,
+      "structural": 0.1
+    }
+  },
+  "confidence_components": null,
+  "limitations": [
+    "ML probabilities and diagnosis scores are uncalibrated.",
+    "Current detector validation/test contain failures only; synthetic source proxies and duplicate features limit reliability.",
+    "A hypothesis and chronological links do not establish a causal root cause."
+  ],
+  "diagnosis_status": "NO_FAILURE_DETECTED",
+  "natural_language_explanation": "Failure probability is below the configured threshold. Taxonomy and localization were not required.",
+  "feature_file": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\trajectory_features.csv",
+  "feature_provenance_note": "Existing feature cache; ID/task/step consistency checked. Payload freshness is not independently verified."
+}

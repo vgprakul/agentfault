@@ -114,6 +114,7 @@ Generated evaluation artifacts:
 - localizer_model_comparison.png
 - localizer_rank_distribution.png
 - localizer_step_distance_distribution.png
+- ml_evaluation_summary.png
 - model_comparison.csv
 - review3_ml_summary.json
 - split_integrity.json

@@ -1,0 +1,412 @@
+{
+  "trajectory_id": "AF-0095_fault_CTRL_LOOP_step_7",
+  "failure_detected": true,
+  "failure_probability": 0.9964236813268097,
+  "predicted_category": "CONTROL",
+  "predicted_subtype": "CTRL_EXCESSIVE_EXPLORATION",
+  "predicted_root_cause_step": 5,
+  "root_cause_confidence": 0.5378795862197876,
+  "ranked_suspicious_steps": [
+    {
+      "step_index": 5,
+      "probability": 0.5378795862197876
+    },
+    {
+      "step_index": 2,
+      "probability": 0.4531404674053192
+    },
+    {
+      "step_index": 7,
+      "probability": 0.3599173426628113
+    }
+  ],
+  "taxonomy_result": {
+    "predicted_category": "CONTROL",
+    "predicted_subtype": "CTRL_EXCESSIVE_EXPLORATION",
+    "category_confidence": 0.74,
+    "subtype_confidence": 0.7533333333333333,
+    "category_probabilities": {
+      "CONTROL": 0.74,
+      "KNOWLEDGE": 0.024,
+      "MULTI_AGENT": 0.0,
+      "PLANNING": 0.16540000000000002,
+      "SECURITY": 0.04,
+      "TOOL": 0.030600000000000002
+    }
+  },
+  "ranked_hypotheses": [
+    {
+      "step_index": 5,
+      "hypothesis_type": "CTRL_EXCESSIVE_EXPLORATION",
+      "suspected_field": "exploration",
+      "tool_name": "calculator",
+      "proposed_change": "apply a task-relevant stopping criterion",
+      "hypothesis": "If the exploration decision at Step 5 had been different so as to apply a task-relevant stopping criterion, the task might have succeeded; this requires verification.",
+      "evidence": {
+        "step_index": 5,
+        "step_type": "TOOL_CALL",
+        "agent": "researcher",
+        "tool_name": "calculator",
+        "input": {
+          "query": "calculate result"
+        },
+        "output": {
+          "result": 42
+        }
+      },
+      "surrounding_steps": [
+        {
+          "step_index": 4,
+          "step_type": "LLM_CALL",
+          "agent": "researcher",
+          "input": {
+            "context": "Retrieved research documents.",
+            "documents": [
+              "doc_001",
+              "doc_002",
+              "doc_003"
+            ]
+          },
+          "output": {
+            "analysis": "The retrieved information supports the requested task."
+          }
+        },
+        {
+          "step_index": 6,
+          "step_type": "HANDOFF",
+          "agent": "researcher",
+          "input": {
+            "research": "Retrieved and analyzed information.",
+            "tool_result": 42
+          },
+          "output": {
+            "target_agent": "writer",
+            "context": {
+              "research": "Retrieved and analyzed information.",
+              "result": 42
+            }
+          }
+        }
+      ],
+      "observations": [],
+      "signals": {
+        "localization": 0.5378795862197876,
+        "taxonomy": 0.74,
+        "evidence": 0.0,
+        "structural": 1.0
+      },
+      "limitations": [
+        "Taxonomy suggests a failure type; the payload alone may not establish correctness. No counterfactual has been executed."
+      ],
+      "score": 0.5539397931098938
+    },
+    {
+      "step_index": 7,
+      "hypothesis_type": "CTRL_EXCESSIVE_EXPLORATION",
+      "suspected_field": "exploration",
+      "tool_name": null,
+      "proposed_change": "apply a task-relevant stopping criterion",
+      "hypothesis": "If the exploration decision at Step 7 had been different so as to apply a task-relevant stopping criterion, the task might have succeeded; this requires verification.",
+      "evidence": {
+        "step_index": 7,
+        "step_type": "LLM_CALL",
+        "agent": "writer",
+        "input": {
+          "research": "Retrieved and analyzed information.",
+          "tool_result": 42,
+          "citation": "doc_001"
+        },
+        "output": {
+          "draft": "Research completed successfully."
+        }
+      },
+      "surrounding_steps": [
+        {
+          "step_index": 6,
+          "step_type": "HANDOFF",
+          "agent": "researcher",
+          "input": {
+            "research": "Retrieved and analyzed information.",
+            "tool_result": 42
+          },
+          "output": {
+            "target_agent": "writer",
+            "context": {
+              "research": "Retrieved and analyzed information.",
+              "result": 42
+            }
+          }
+        },
+        {
+          "step_index": 8,
+          "step_type": "LLM_CALL",
+          "agent": "writer",
+          "input": {
+            "draft": "Research completed successfully.",
+            "success_criteria": "Answer the task accurately."
+          },
+          "output": {
+            "final_answer": "Research completed successfully."
+          }
+        }
+      ],
+      "observations": [],
+      "signals": {
+        "localization": 0.3599173426628113,
+        "taxonomy": 0.74,
+        "evidence": 0.0,
+        "structural": 1.0
+      },
+      "limitations": [
+        "Taxonomy suggests a failure type; the payload alone may not establish correctness. No counterfactual has been executed."
+      ],
+      "score": 0.46495867133140567
+    },
+    {
+      "step_index": 2,
+      "hypothesis_type": "CTRL_EXCESSIVE_EXPLORATION",
+      "suspected_field": "exploration",
+      "tool_name": null,
+      "proposed_change": "apply a task-relevant stopping criterion",
+      "hypothesis": "If the exploration decision at Step 2 had been different so as to apply a task-relevant stopping criterion, the task might have succeeded; this requires verification.",
+      "evidence": {
+        "step_index": 2,
+        "step_type": "HANDOFF",
+        "agent": "planner",
+        "input": {
+          "task": "Research the given topic.",
+          "responsibility": "research"
+        },
+        "output": {
+          "target_agent": "researcher",
+          "context": "Perform research and return relevant findings."
+        }
+      },
+      "surrounding_steps": [
+        {
+          "step_index": 1,
+          "step_type": "LLM_CALL",
+          "agent": "planner",
+          "input": {
+            "task": "Research the given topic and produce a final answer."
+          },
+          "output": {
+            "plan": [
+              "retrieve_information",
+              "analyze_information",
+              "calculate_result",
+              "produce_answer"
+            ],
+            "success_criteria": "Answer the task accurately."
+          }
+        },
+        {
+          "step_index": 3,
+          "step_type": "RETRIEVAL",
+          "agent": "researcher",
+          "input": {
+            "query": "relevant information",
+            "context": "Research the given topic."
+          },
+          "output": {
+            "documents_found": 3
+          },
+          "retrieved_docs": [
+            {
+              "id": "doc_001",
+              "content": "Relevant research information.",
+              "source": "source_a"
+            },
+            {
+              "id": "doc_002",
+              "content": "Additional supporting information.",
+              "source": "source_b"
+            },
+            {
+              "id": "doc_003",
+              "content": "Background information.",
+              "source": "source_c"
+            }
+          ]
+        }
+      ],
+      "observations": [],
+      "signals": {
+        "localization": 0.4531404674053192,
+        "taxonomy": 0.74,
+        "evidence": 0.0,
+        "structural": 0.0
+      },
+      "limitations": [
+        "Taxonomy suggests a failure type; the payload alone may not establish correctness. No counterfactual has been executed."
+      ],
+      "score": 0.4115702337026596
+    }
+  ],
+  "selected_hypothesis": {
+    "step_index": 5,
+    "hypothesis_type": "CTRL_EXCESSIVE_EXPLORATION",
+    "suspected_field": "exploration",
+    "tool_name": "calculator",
+    "proposed_change": "apply a task-relevant stopping criterion",
+    "hypothesis": "If the exploration decision at Step 5 had been different so as to apply a task-relevant stopping criterion, the task might have succeeded; this requires verification.",
+    "evidence": {
+      "step_index": 5,
+      "step_type": "TOOL_CALL",
+      "agent": "researcher",
+      "tool_name": "calculator",
+      "input": {
+        "query": "calculate result"
+      },
+      "output": {
+        "result": 42
+      }
+    },
+    "surrounding_steps": [
+      {
+        "step_index": 4,
+        "step_type": "LLM_CALL",
+        "agent": "researcher",
+        "input": {
+          "context": "Retrieved research documents.",
+          "documents": [
+            "doc_001",
+            "doc_002",
+            "doc_003"
+          ]
+        },
+        "output": {
+          "analysis": "The retrieved information supports the requested task."
+        }
+      },
+      {
+        "step_index": 6,
+        "step_type": "HANDOFF",
+        "agent": "researcher",
+        "input": {
+          "research": "Retrieved and analyzed information.",
+          "tool_result": 42
+        },
+        "output": {
+          "target_agent": "writer",
+          "context": {
+            "research": "Retrieved and analyzed information.",
+            "result": 42
+          }
+        }
+      }
+    ],
+    "observations": [],
+    "signals": {
+      "localization": 0.5378795862197876,
+      "taxonomy": 0.74,
+      "evidence": 0.0,
+      "structural": 1.0
+    },
+    "limitations": [
+      "Taxonomy suggests a failure type; the payload alone may not establish correctness. No counterfactual has been executed."
+    ],
+    "score": 0.5539397931098938
+  },
+  "selected_evidence_step": {
+    "step_index": 5,
+    "step_type": "TOOL_CALL",
+    "agent": "researcher",
+    "tool_name": "calculator",
+    "input": {
+      "query": "calculate result"
+    },
+    "output": {
+      "result": 42
+    }
+  },
+  "propagation_chain": [
+    {
+      "step_index": 5,
+      "step_type": "TOOL_CALL",
+      "agent": "researcher",
+      "relationship": "suspected_origin",
+      "causal_effect_verified": false
+    },
+    {
+      "step_index": 6,
+      "step_type": "HANDOFF",
+      "agent": "researcher",
+      "relationship": "temporal_order_only",
+      "causal_effect_verified": false,
+      "from_step": 5
+    },
+    {
+      "step_index": 7,
+      "step_type": "LLM_CALL",
+      "agent": "writer",
+      "relationship": "temporal_order_only",
+      "causal_effect_verified": false,
+      "from_step": 6
+    },
+    {
+      "step_index": 8,
+      "step_type": "LLM_CALL",
+      "agent": "writer",
+      "relationship": "temporal_order_only",
+      "causal_effect_verified": false,
+      "from_step": 7
+    },
+    {
+      "step_index": 9,
+      "step_type": "LLM_CALL",
+      "agent": "writer",
+      "relationship": "temporal_order_only",
+      "causal_effect_verified": false,
+      "from_step": 8
+    },
+    {
+      "step_index": 10,
+      "step_type": "LLM_CALL",
+      "agent": "writer",
+      "relationship": "temporal_order_only",
+      "causal_effect_verified": false,
+      "from_step": 9
+    }
+  ],
+  "diagnosis_confidence": 0.5967166133324305,
+  "counterfactual_status": "NOT_RUN",
+  "replay_request": {
+    "trajectory_id": "AF-0095_fault_CTRL_LOOP_step_7",
+    "target_step": 5,
+    "hypothesis_type": "CTRL_EXCESSIVE_EXPLORATION",
+    "proposed_change": "apply a task-relevant stopping criterion"
+  },
+  "replay_interpretation": null,
+  "recommended_next_action": null,
+  "reasons": [],
+  "configuration": {
+    "top_k": 3,
+    "failure_threshold": 0.5,
+    "category_threshold": 0.5,
+    "localization_threshold": 0.5,
+    "hypothesis_threshold": 0.5,
+    "tie_tolerance": 0.01,
+    "weights": {
+      "localization": 0.5,
+      "taxonomy": 0.25,
+      "evidence": 0.15,
+      "structural": 0.1
+    }
+  },
+  "confidence_components": {
+    "root": 0.5378795862197876,
+    "category": 0.74,
+    "subtype": 0.7533333333333333,
+    "margin": 0.08898112177848816
+  },
+  "limitations": [
+    "ML probabilities and diagnosis scores are uncalibrated.",
+    "Current detector validation/test contain failures only; synthetic source proxies and duplicate features limit reliability.",
+    "A hypothesis and chronological links do not establish a causal root cause."
+  ],
+  "diagnosis_status": "HYPOTHESIS_SELECTED",
+  "natural_language_explanation": "Leading hypothesis: If the exploration decision at Step 5 had been different so as to apply a task-relevant stopping criterion, the task might have succeeded; this requires verification. Observed evidence: No explicit error or repeated-action evidence was observed at this step. Downstream chronology: Step 5 -> Step 6 -> Step 7 -> Step 8 -> Step 9 -> Step 10. Chronological links do not establish causal effects. Diagnosis confidence: 0.597 (uncalibrated weighted score). Counterfactual status: NOT_RUN.",
+  "feature_file": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\trajectory_features.csv",
+  "feature_provenance_note": "Existing feature cache; ID/task/step consistency checked. Payload freshness is not independently verified."
+}

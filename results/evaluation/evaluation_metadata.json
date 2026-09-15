@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-09-15T13:54:30.788212+00:00",
+  "timestamp_utc": "2026-09-15T15:07:03.243623+00:00",
   "random_seed": 42,
-  "git_commit": "cf529ec01ffd7d9735ba9b37bbc3e0f1c0e3b33c",
+  "git_commit": "d36ae3504bae19073d452f9947c89d7cf27a82d0",
   "paths": {
     "taxonomy_model": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\models\\taxonomy\\best_model.joblib",
     "localizer_model": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\models\\localizer\\best_localizer.joblib",

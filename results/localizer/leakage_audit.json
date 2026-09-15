@@ -1,0 +1,23 @@
+{
+  "explicit_leakage_columns": [],
+  "excluded_metadata": [
+    "trajectory_id",
+    "task_id",
+    "step_index",
+    "normalized_step_position",
+    "origin_step",
+    "fault_injected"
+  ],
+  "predictor_count": 28,
+  "test_steps_matching_train": 120,
+  "suspicious_top_feature_names": [
+    "categorical__agent_id_wrong_agent",
+    "categorical__tool_name_wrong_tool"
+  ],
+  "warnings": [
+    "Small synthetic dataset; repeated templates, runtime sentinel values, payload sizes and missingness may encode injection patterns. Raw probabilities are uncalibrated and are not normalized across steps.",
+    "Step predictors use only observed local/prefix features. Final ranking uses the complete supplied trajectory; this does not implement early failure prediction.",
+    "120/124 test step feature vectors occur in training, including 15/15 positive steps. Distinct task IDs do not eliminate synthetic-template reuse.",
+    "Top observable categorical features include synthetic injection sentinels: categorical__agent_id_wrong_agent, categorical__tool_name_wrong_tool. These are runtime field values, not label columns, but may reveal injection patterns."
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "oracle_category_metrics": {
+    "PLANNING": {
+      "accuracy": 1.0,
+      "macro_precision": 0.3333333333333333,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.3333333333333333,
+      "weighted_f1": 1.0,
+      "metric_labels": [
+        "PLAN_MISSING_STEP",
+        "PLAN_INCORRECT_SUCCESS_CRITERIA",
+        "PLAN_INVALID_DEPENDENCY"
+      ],
+      "per_class": {
+        "PLAN_MISSING_STEP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "PLAN_INCORRECT_SUCCESS_CRITERIA": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "PLAN_INVALID_DEPENDENCY": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 0.3333333333333333,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.3333333333333333,
+          "support": 1.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        }
+      }
+    },
+    "TOOL": {
+      "accuracy": 1.0,
+      "macro_precision": 0.75,
+      "macro_recall": 0.75,
+      "macro_f1": 0.75,
+      "weighted_f1": 1.0,
+      "metric_labels": [
+        "TOOL_WRONG_TOOL",
+        "TOOL_WRONG_ARGUMENT",
+        "TOOL_UNNECESSARY_CALL",
+        "TOOL_FAILED_RECOVERY"
+      ],
+      "per_class": {
+        "TOOL_WRONG_TOOL": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "TOOL_WRONG_ARGUMENT": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "TOOL_UNNECESSARY_CALL": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "TOOL_FAILED_RECOVERY": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1-score": 0.75,
+          "support": 3.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        }
+      }
+    },
+    "KNOWLEDGE": {
+      "accuracy": 1.0,
+      "macro_precision": 0.6666666666666666,
+      "macro_recall": 0.6666666666666666,
+      "macro_f1": 0.6666666666666666,
+      "weighted_f1": 1.0,
+      "metric_labels": [
+        "KNOW_RETRIEVAL_FAILURE",
+        "KNOW_CITATION_MISMATCH",
+        "KNOW_CONTEXT_TRUNCATION"
+      ],
+      "per_class": {
+        "KNOW_RETRIEVAL_FAILURE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "KNOW_CITATION_MISMATCH": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "KNOW_CONTEXT_TRUNCATION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 2.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        }
+      }
+    },
+    "MULTI_AGENT": {
+      "accuracy": 0.6666666666666666,
+      "macro_precision": 0.25,
+      "macro_recall": 0.25,
+      "macro_f1": 0.25,
+      "weighted_f1": 0.6666666666666666,
+      "metric_labels": [
+        "MA_INCORRECT_HANDOFF",
+        "MA_INFORMATION_LOSS",
+        "MA_MISSING_RESPONSIBILITY",
+        "MA_ROLE_OVERLAP"
+      ],
+      "per_class": {
+        "MA_INCORRECT_HANDOFF": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "MA_INFORMATION_LOSS": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "MA_MISSING_RESPONSIBILITY": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "MA_ROLE_OVERLAP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "accuracy": 0.6666666666666666,
+        "macro avg": {
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1-score": 0.25,
+          "support": 3.0
+        },
+        "weighted avg": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 3.0
+        }
+      }
+    },
+    "CONTROL": {
+      "accuracy": 0.6,
+      "macro_precision": 0.6666666666666666,
+      "macro_recall": 0.4444444444444444,
+      "macro_f1": 0.5,
+      "weighted_f1": 0.7,
+      "metric_labels": [
+        "CTRL_LOOP",
+        "CTRL_PREMATURE_TERMINATION",
+        "CTRL_EXCESSIVE_EXPLORATION"
+      ],
+      "per_class": {
+        "CTRL_LOOP": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.5,
+          "support": 3.0
+        },
+        "CTRL_PREMATURE_TERMINATION": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "CTRL_EXCESSIVE_EXPLORATION": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "accuracy": 0.6,
+        "macro avg": {
+          "precision": 0.6666666666666666,
+          "recall": 0.4444444444444444,
+          "f1-score": 0.5,
+          "support": 5.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1-score": 0.7,
+          "support": 5.0
+        }
+      }
+    }
+  },
+  "routed_metrics": {
+    "accuracy": 0.6666666666666666,
+    "macro_precision": 0.4,
+    "macro_recall": 0.3666666666666667,
+    "macro_f1": 0.375,
+    "weighted_f1": 0.7,
+    "metric_labels": [
+      "CTRL_EXCESSIVE_EXPLORATION",
+      "CTRL_LOOP",
+      "CTRL_PREMATURE_TERMINATION",
+      "KNOW_CITATION_MISMATCH",
+      "KNOW_CONTEXT_TRUNCATION",
+      "KNOW_RETRIEVAL_FAILURE",
+      "MA_INCORRECT_HANDOFF",
+      "MA_INFORMATION_LOSS",
+      "MA_MISSING_RESPONSIBILITY",
+      "MA_ROLE_OVERLAP",
+      "PLAN_INCORRECT_SUCCESS_CRITERIA",
+      "PLAN_INVALID_DEPENDENCY",
+      "PLAN_MISSING_STEP",
+      "SEC_CROSS_USER_DATA_LEAKAGE",
+      "SEC_PROMPT_INJECTION",
+      "SEC_UNAUTHORIZED_ACTION",
+      "TOOL_FAILED_RECOVERY",
+      "TOOL_UNNECESSARY_CALL",
+      "TOOL_WRONG_ARGUMENT",
+      "TOOL_WRONG_TOOL"
+    ],
+    "per_class": {
+      "CTRL_EXCESSIVE_EXPLORATION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "CTRL_LOOP": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.5,
+        "support": 3.0
+      },
+      "CTRL_PREMATURE_TERMINATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "KNOW_CITATION_MISMATCH": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "KNOW_CONTEXT_TRUNCATION": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "KNOW_RETRIEVAL_FAILURE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "MA_INCORRECT_HANDOFF": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "MA_INFORMATION_LOSS": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "MA_MISSING_RESPONSIBILITY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "MA_ROLE_OVERLAP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "PLAN_INCORRECT_SUCCESS_CRITERIA": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "PLAN_INVALID_DEPENDENCY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "PLAN_MISSING_STEP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "SEC_CROSS_USER_DATA_LEAKAGE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "SEC_PROMPT_INJECTION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "SEC_UNAUTHORIZED_ACTION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "TOOL_FAILED_RECOVERY": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "TOOL_UNNECESSARY_CALL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "TOOL_WRONG_ARGUMENT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 1.0
+      },
+      "TOOL_WRONG_TOOL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1.0
+      },
+      "accuracy": 0.6666666666666666,
+      "macro avg": {
+        "precision": 0.4,
+        "recall": 0.3666666666666667,
+        "f1-score": 0.375,
+        "support": 15.0
+      },
+      "weighted avg": {
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.7,
+        "support": 15.0
+      }
+    }
+  },
+  "prediction_coverage": 1.0,
+  "hierarchical_accuracy": 0.6666666666666666,
+  "unavailable_models": {
+    "SECURITY": "Requires >=6 training rows, >=2 subtype classes and >=2 rows in every observed subtype"
+  },
+  "note": "Oracle metrics assume the true category; routed metrics use the predicted category. Unavailable subtype predictions count as incorrect. Macro subtype metrics cover the 20 declared subtypes."
+}

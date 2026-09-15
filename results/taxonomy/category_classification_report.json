@@ -1,0 +1,66 @@
+{
+  "accuracy": 0.8666666666666667,
+  "macro_precision": 0.7666666666666666,
+  "macro_recall": 0.7777777777777778,
+  "macro_f1": 0.7583333333333333,
+  "weighted_f1": 0.8433333333333334,
+  "metric_labels": [
+    "CONTROL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "PLANNING",
+    "SECURITY",
+    "TOOL"
+  ],
+  "per_class": {
+    "CONTROL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 5.0
+    },
+    "KNOWLEDGE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "MULTI_AGENT": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1-score": 0.75,
+      "support": 3.0
+    },
+    "PLANNING": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "SECURITY": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 1.0
+    },
+    "TOOL": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.8,
+      "support": 3.0
+    },
+    "accuracy": 0.8666666666666667,
+    "macro avg": {
+      "precision": 0.7666666666666666,
+      "recall": 0.7777777777777778,
+      "f1-score": 0.7583333333333333,
+      "support": 15.0
+    },
+    "weighted avg": {
+      "precision": 0.8533333333333334,
+      "recall": 0.8666666666666667,
+      "f1-score": 0.8433333333333334,
+      "support": 15.0
+    }
+  }
+}

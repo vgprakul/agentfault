@@ -1,0 +1,104 @@
+{
+  "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+  "task_id": "TASK-0004",
+  "actual_root_cause_step": 5,
+  "predicted_root_cause_step": 5,
+  "predicted_probability": 0.9741878509521484,
+  "actual_root_cause_rank": 1,
+  "exact_match": true,
+  "in_top3": true,
+  "reciprocal_rank": 1.0,
+  "absolute_step_distance": 0,
+  "in_top5": true,
+  "total_steps": 8,
+  "ranked_steps": [
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 5,
+      "root_cause_probability": 0.9741878509521484,
+      "predicted_rank": 1,
+      "actual_is_root_cause": 1,
+      "step_type": "TOOL_CALL",
+      "agent_id": "researcher",
+      "tool_name": "wrong_tool"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 2,
+      "root_cause_probability": 0.4531404674053192,
+      "predicted_rank": 2,
+      "actual_is_root_cause": 0,
+      "step_type": "HANDOFF",
+      "agent_id": "planner",
+      "tool_name": "UNKNOWN"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 7,
+      "root_cause_probability": 0.3599173426628113,
+      "predicted_rank": 3,
+      "actual_is_root_cause": 0,
+      "step_type": "LLM_CALL",
+      "agent_id": "writer",
+      "tool_name": "UNKNOWN"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 3,
+      "root_cause_probability": 0.31700828671455383,
+      "predicted_rank": 4,
+      "actual_is_root_cause": 0,
+      "step_type": "RETRIEVAL",
+      "agent_id": "researcher",
+      "tool_name": "UNKNOWN"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 6,
+      "root_cause_probability": 0.12674055993556976,
+      "predicted_rank": 5,
+      "actual_is_root_cause": 0,
+      "step_type": "HANDOFF",
+      "agent_id": "researcher",
+      "tool_name": "UNKNOWN"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 4,
+      "root_cause_probability": 0.10733463615179062,
+      "predicted_rank": 6,
+      "actual_is_root_cause": 0,
+      "step_type": "LLM_CALL",
+      "agent_id": "researcher",
+      "tool_name": "UNKNOWN"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 1,
+      "root_cause_probability": 0.020882323384284973,
+      "predicted_rank": 7,
+      "actual_is_root_cause": 0,
+      "step_type": "LLM_CALL",
+      "agent_id": "planner",
+      "tool_name": "UNKNOWN"
+    },
+    {
+      "trajectory_id": "AF-0004_fault_TOOL_WRONG_TOOL_step_5",
+      "task_id": "TASK-0004",
+      "step_index": 8,
+      "root_cause_probability": 0.0037037760484963655,
+      "predicted_rank": 8,
+      "actual_is_root_cause": 0,
+      "step_type": "LLM_CALL",
+      "agent_id": "writer",
+      "tool_name": "UNKNOWN"
+    }
+  ]
+}

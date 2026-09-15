@@ -1,0 +1,4 @@
+-r requirements-features.txt
+joblib>=1.3
+# Optional preferred tabular model; training skips it if unavailable.
+xgboost>=2.0

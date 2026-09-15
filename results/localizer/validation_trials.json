@@ -1,0 +1,382 @@
+[
+  {
+    "model": "Logistic Regression",
+    "parameters": {
+      "C": 0.1
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.4666666666666667,
+      "top3_accuracy": 0.6666666666666666,
+      "mrr": 0.5896825396825397,
+      "mean_absolute_step_distance": 0.8666666666666667,
+      "top5_accuracy": 0.7333333333333333,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.22727272727272727,
+      "recall": 0.6666666666666666,
+      "f1": 0.3389830508474576,
+      "pr_auc": 0.5263036178819862,
+      "roc_auc": 0.725,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.9333333333333333,
+          "recall": 0.6730769230769231,
+          "f1-score": 0.7821229050279329,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.22727272727272727,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.3389830508474576,
+          "support": 15.0
+        },
+        "accuracy": 0.6722689075630253,
+        "macro avg": {
+          "precision": 0.5803030303030303,
+          "recall": 0.6698717948717949,
+          "f1-score": 0.5605529779376952,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8443340972752736,
+          "recall": 0.6722689075630253,
+          "f1-score": 0.726264940215268,
+          "support": 119.0
+        }
+      }
+    }
+  },
+  {
+    "model": "Logistic Regression",
+    "parameters": {
+      "C": 1.0
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.4666666666666667,
+      "top3_accuracy": 0.7333333333333333,
+      "mrr": 0.6285714285714284,
+      "mean_absolute_step_distance": 0.8666666666666667,
+      "top5_accuracy": 0.7333333333333333,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.3888888888888889,
+      "recall": 0.4666666666666667,
+      "f1": 0.42424242424242425,
+      "pr_auc": 0.5480584133886063,
+      "roc_auc": 0.75,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.9207920792079208,
+          "recall": 0.8942307692307693,
+          "f1-score": 0.9073170731707317,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.3888888888888889,
+          "recall": 0.4666666666666667,
+          "f1-score": 0.42424242424242425,
+          "support": 15.0
+        },
+        "accuracy": 0.8403361344537815,
+        "macro avg": {
+          "precision": 0.6548404840484049,
+          "recall": 0.680448717948718,
+          "f1-score": 0.665779748706578,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8537454585794714,
+          "recall": 0.8403361344537815,
+          "f1-score": 0.846425310700777,
+          "support": 119.0
+        }
+      }
+    }
+  },
+  {
+    "model": "Logistic Regression",
+    "parameters": {
+      "C": 10.0
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.4666666666666667,
+      "top3_accuracy": 0.7333333333333333,
+      "mrr": 0.6285714285714284,
+      "mean_absolute_step_distance": 0.8666666666666667,
+      "top5_accuracy": 0.7333333333333333,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.4117647058823529,
+      "recall": 0.4666666666666667,
+      "f1": 0.4375,
+      "pr_auc": 0.5469049684063915,
+      "roc_auc": 0.7455128205128205,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.9215686274509803,
+          "recall": 0.9038461538461539,
+          "f1-score": 0.912621359223301,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.4117647058823529,
+          "recall": 0.4666666666666667,
+          "f1-score": 0.4375,
+          "support": 15.0
+        },
+        "accuracy": 0.8487394957983193,
+        "macro avg": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6852564102564103,
+          "f1-score": 0.6750606796116505,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8573076289339265,
+          "recall": 0.8487394957983193,
+          "f1-score": 0.8527321122623808,
+          "support": 119.0
+        }
+      }
+    }
+  },
+  {
+    "model": "Random Forest",
+    "parameters": {
+      "n_estimators": 150,
+      "max_depth": 6,
+      "min_samples_leaf": 2,
+      "class_weight": "balanced"
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.4666666666666667,
+      "top3_accuracy": 0.7333333333333333,
+      "mrr": 0.6206349206349205,
+      "mean_absolute_step_distance": 0.8666666666666667,
+      "top5_accuracy": 0.8666666666666667,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.4117647058823529,
+      "recall": 0.4666666666666667,
+      "f1": 0.4375,
+      "pr_auc": 0.5530123032593518,
+      "roc_auc": 0.7916666666666667,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.9215686274509803,
+          "recall": 0.9038461538461539,
+          "f1-score": 0.912621359223301,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.4117647058823529,
+          "recall": 0.4666666666666667,
+          "f1-score": 0.4375,
+          "support": 15.0
+        },
+        "accuracy": 0.8487394957983193,
+        "macro avg": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6852564102564103,
+          "f1-score": 0.6750606796116505,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8573076289339265,
+          "recall": 0.8487394957983193,
+          "f1-score": 0.8527321122623808,
+          "support": 119.0
+        }
+      }
+    }
+  },
+  {
+    "model": "Random Forest",
+    "parameters": {
+      "n_estimators": 250,
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "class_weight": "balanced"
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.6,
+      "top3_accuracy": 0.6666666666666666,
+      "mrr": 0.7077777777777777,
+      "mean_absolute_step_distance": 0.7333333333333333,
+      "top5_accuracy": 0.9333333333333333,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.47368421052631576,
+      "recall": 0.6,
+      "f1": 0.5294117647058824,
+      "pr_auc": 0.6566927481898904,
+      "roc_auc": 0.8397435897435898,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.94,
+          "recall": 0.9038461538461539,
+          "f1-score": 0.9215686274509803,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.47368421052631576,
+          "recall": 0.6,
+          "f1-score": 0.5294117647058824,
+          "support": 15.0
+        },
+        "accuracy": 0.865546218487395,
+        "macro avg": {
+          "precision": 0.7068421052631578,
+          "recall": 0.7519230769230769,
+          "f1-score": 0.7254901960784313,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8812206988058381,
+          "recall": 0.865546218487395,
+          "f1-score": 0.8721370901301697,
+          "support": 119.0
+        }
+      }
+    }
+  },
+  {
+    "model": "XGBoost",
+    "parameters": {
+      "n_estimators": 100,
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "scale_pos_weight": 7.171428571428572
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.6,
+      "top3_accuracy": 0.8666666666666667,
+      "mrr": 0.7206349206349205,
+      "mean_absolute_step_distance": 0.7333333333333333,
+      "top5_accuracy": 0.8666666666666667,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.42857142857142855,
+      "recall": 0.6,
+      "f1": 0.5,
+      "pr_auc": 0.6595004939069888,
+      "roc_auc": 0.8301282051282051,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.9387755102040817,
+          "recall": 0.8846153846153846,
+          "f1-score": 0.9108910891089109,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.42857142857142855,
+          "recall": 0.6,
+          "f1-score": 0.5,
+          "support": 15.0
+        },
+        "accuracy": 0.8487394957983193,
+        "macro avg": {
+          "precision": 0.6836734693877551,
+          "recall": 0.7423076923076923,
+          "f1-score": 0.7054455445544554,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8744640713428229,
+          "recall": 0.8487394957983193,
+          "f1-score": 0.8590980946834179,
+          "support": 119.0
+        }
+      }
+    }
+  },
+  {
+    "model": "XGBoost",
+    "parameters": {
+      "n_estimators": 150,
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "scale_pos_weight": 7.171428571428572
+    },
+    "ranking": {
+      "faulty_trajectories": 15,
+      "exact_step_accuracy": 0.6,
+      "top3_accuracy": 0.8666666666666667,
+      "mrr": 0.7244444444444444,
+      "mean_absolute_step_distance": 0.7333333333333333,
+      "top5_accuracy": 0.9333333333333333,
+      "top5_eligible_trajectories": 15,
+      "tie_rule": "probability descending, then step_index ascending"
+    },
+    "binary": {
+      "precision": 0.47368421052631576,
+      "recall": 0.6,
+      "f1": 0.5294117647058824,
+      "pr_auc": 0.6679901178972386,
+      "roc_auc": 0.8583333333333333,
+      "threshold": 0.5,
+      "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)",
+      "classification_report": {
+        "0": {
+          "precision": 0.94,
+          "recall": 0.9038461538461539,
+          "f1-score": 0.9215686274509803,
+          "support": 104.0
+        },
+        "1": {
+          "precision": 0.47368421052631576,
+          "recall": 0.6,
+          "f1-score": 0.5294117647058824,
+          "support": 15.0
+        },
+        "accuracy": 0.865546218487395,
+        "macro avg": {
+          "precision": 0.7068421052631578,
+          "recall": 0.7519230769230769,
+          "f1-score": 0.7254901960784313,
+          "support": 119.0
+        },
+        "weighted avg": {
+          "precision": 0.8812206988058381,
+          "recall": 0.865546218487395,
+          "f1-score": 0.8721370901301697,
+          "support": 119.0
+        }
+      }
+    }
+  }
+]

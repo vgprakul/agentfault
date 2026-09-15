@@ -1,0 +1,2509 @@
+{
+  "created_utc": "2026-09-15T13:16:41.578469+00:00",
+  "best_model": "XGBoost",
+  "best_parameters": {
+    "n_estimators": 150,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "scale_pos_weight": 7.171428571428572
+  },
+  "random_state": 42,
+  "data_counts": {
+    "loaded_step_rows": 815,
+    "loaded_trajectories": 100,
+    "faulty_trajectories": 100,
+    "usable_faulty_trajectories": 100,
+    "clean_trajectories": 0,
+    "missing_root_cause_labels": 0,
+    "invalid_trajectories": 0,
+    "multiple_positive_trajectories": 0,
+    "unknown_fault_status_trajectories": 0,
+    "issues": [],
+    "usable_step_rows": 815,
+    "positive_steps": 100,
+    "negative_steps": 715,
+    "split_counts": {
+      "train": {
+        "trajectories": 70,
+        "steps": 572,
+        "positive_steps": 70,
+        "negative_steps": 502
+      },
+      "validation": {
+        "trajectories": 15,
+        "steps": 119,
+        "positive_steps": 15,
+        "negative_steps": 104
+      },
+      "test": {
+        "trajectories": 15,
+        "steps": 124,
+        "positive_steps": 15,
+        "negative_steps": 109
+      }
+    }
+  },
+  "training_weights": {
+    "positive_training_steps": 70,
+    "negative_training_steps": 502,
+    "scale_pos_weight": 7.171428571428572
+  },
+  "validation_comparison": [
+    {
+      "model": "Logistic Regression",
+      "validation_exact_step_accuracy": 0.4666666666666667,
+      "validation_top3_accuracy": 0.7333333333333333,
+      "validation_mrr": 0.6285714285714284,
+      "validation_mean_absolute_step_distance": 0.8666666666666667,
+      "parameters": "{'C': 1.0}"
+    },
+    {
+      "model": "Random Forest",
+      "validation_exact_step_accuracy": 0.6,
+      "validation_top3_accuracy": 0.6666666666666666,
+      "validation_mrr": 0.7077777777777777,
+      "validation_mean_absolute_step_distance": 0.7333333333333333,
+      "parameters": "{'n_estimators': 250, 'max_depth': None, 'min_samples_leaf': 1, 'class_weight': 'balanced'}"
+    },
+    {
+      "model": "XGBoost",
+      "validation_exact_step_accuracy": 0.6,
+      "validation_top3_accuracy": 0.8666666666666667,
+      "validation_mrr": 0.7244444444444444,
+      "validation_mean_absolute_step_distance": 0.7333333333333333,
+      "parameters": "{'n_estimators': 150, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9, 'scale_pos_weight': 7.171428571428572}"
+    }
+  ],
+  "selection_rule": "validation MRR, then exact-step accuracy; ties retain earlier candidate; no test-based tuning or refit",
+  "training_trajectory_ids": [
+    "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0035_fault_CTRL_LOOP_step_5",
+    "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+    "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+    "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0075_fault_CTRL_LOOP_step_5",
+    "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+    "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+    "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+    "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+    "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+    "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+    "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+    "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+    "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+    "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+    "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+    "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+    "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+    "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+    "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2"
+  ],
+  "training_step_keys": [
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0035_fault_CTRL_LOOP_step_5",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0075_fault_CTRL_LOOP_step_5",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 9
+    },
+    {
+      "trajectory_id": "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+      "step_index": 10
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+      "step_index": 8
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 1
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 2
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 3
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 4
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 5
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 6
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 7
+    },
+    {
+      "trajectory_id": "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+      "step_index": 8
+    }
+  ],
+  "validation_trajectory_ids": [
+    "AF-0058_fault_SEC_PROMPT_INJECTION_step_7",
+    "AF-0054_fault_MA_ROLE_OVERLAP_step_6",
+    "AF-0030_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+    "AF-0085_fault_TOOL_WRONG_ARGUMENT_step_5",
+    "AF-0026_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0094_fault_MA_ROLE_OVERLAP_step_2",
+    "AF-0078_fault_SEC_PROMPT_INJECTION_step_7",
+    "AF-0065_fault_TOOL_WRONG_ARGUMENT_step_5",
+    "AF-0089_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0098_fault_SEC_PROMPT_INJECTION_step_4",
+    "AF-0096_fault_CTRL_PREMATURE_TERMINATION_step_7",
+    "AF-0090_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+    "AF-0072_fault_MA_INFORMATION_LOSS_step_6",
+    "AF-0001_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0028_fault_KNOW_RETRIEVAL_FAILURE_step_3"
+  ],
+  "feature_columns": [
+    "step_type",
+    "agent_id",
+    "tool_name",
+    "status",
+    "has_error",
+    "is_tool_step",
+    "is_retrieval_step",
+    "is_llm_step",
+    "is_handoff_step",
+    "input_length_chars",
+    "output_length_chars",
+    "input_length_words",
+    "output_length_words",
+    "cumulative_tool_calls",
+    "cumulative_retrievals",
+    "cumulative_errors",
+    "cumulative_retries",
+    "cumulative_handoffs",
+    "cumulative_unique_tools",
+    "cumulative_unique_agents",
+    "repeated_action_count_so_far",
+    "previous_step_same_type",
+    "previous_step_same_agent",
+    "previous_step_same_tool",
+    "steps_since_last_successful_action",
+    "task_step_similarity",
+    "semantic_drift",
+    "previous_step_similarity"
+  ],
+  "all_missing_training_features": [
+    "steps_since_last_successful_action"
+  ],
+  "input_sha256": {
+    "step_features": "cc76db6a9ab9896405663796997bc74d7d25f4a91b17bb061fc2a65a315fe5d7",
+    "manifest": "4770ad3adce7021d3660688b909396d81090e8e8d13812f671989b5d42a7580c",
+    "trajectory_metadata": "41afbc21e2449fd9cfebd01633ef385e79fcab76bd91689b24476f28e30ffc05"
+  },
+  "versions": {
+    "scikit-learn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6",
+    "joblib": "1.5.1",
+    "xgboost": "3.4.1"
+  },
+  "warnings": [
+    "Small synthetic dataset; repeated templates, runtime sentinel values, payload sizes and missingness may encode injection patterns. Raw probabilities are uncalibrated and are not normalized across steps.",
+    "Step predictors use only observed local/prefix features. Final ranking uses the complete supplied trajectory; this does not implement early failure prediction."
+  ],
+  "probabilities_calibrated": false
+}

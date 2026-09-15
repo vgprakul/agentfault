@@ -1,0 +1,152 @@
+{
+  "best_model": "XGBoost",
+  "test_faulty_trajectories": 15,
+  "exact_step_accuracy": 0.6,
+  "top3_accuracy": 0.9333333333333333,
+  "mrr": 0.7333333333333333,
+  "mean_absolute_step_distance": 0.8,
+  "top5_accuracy": 0.9333333333333333,
+  "top5_eligible_trajectories": 15,
+  "tie_rule": "probability descending, then step_index ascending",
+  "data_counts": {
+    "loaded_step_rows": 815,
+    "loaded_trajectories": 100,
+    "faulty_trajectories": 100,
+    "usable_faulty_trajectories": 100,
+    "clean_trajectories": 0,
+    "missing_root_cause_labels": 0,
+    "invalid_trajectories": 0,
+    "multiple_positive_trajectories": 0,
+    "unknown_fault_status_trajectories": 0,
+    "issues": [],
+    "usable_step_rows": 815,
+    "positive_steps": 100,
+    "negative_steps": 715,
+    "split_counts": {
+      "train": {
+        "trajectories": 70,
+        "steps": 572,
+        "positive_steps": 70,
+        "negative_steps": 502
+      },
+      "validation": {
+        "trajectories": 15,
+        "steps": 119,
+        "positive_steps": 15,
+        "negative_steps": 104
+      },
+      "test": {
+        "trajectories": 15,
+        "steps": 124,
+        "positive_steps": 15,
+        "negative_steps": 109
+      }
+    }
+  },
+  "validation_comparison": [
+    {
+      "model": "Logistic Regression",
+      "validation_exact_step_accuracy": 0.4666666666666667,
+      "validation_top3_accuracy": 0.7333333333333333,
+      "validation_mrr": 0.6285714285714284,
+      "validation_mean_absolute_step_distance": 0.8666666666666667,
+      "parameters": "{'C': 1.0}"
+    },
+    {
+      "model": "Random Forest",
+      "validation_exact_step_accuracy": 0.6,
+      "validation_top3_accuracy": 0.6666666666666666,
+      "validation_mrr": 0.7077777777777777,
+      "validation_mean_absolute_step_distance": 0.7333333333333333,
+      "parameters": "{'n_estimators': 250, 'max_depth': None, 'min_samples_leaf': 1, 'class_weight': 'balanced'}"
+    },
+    {
+      "model": "XGBoost",
+      "validation_exact_step_accuracy": 0.6,
+      "validation_top3_accuracy": 0.8666666666666667,
+      "validation_mrr": 0.7244444444444444,
+      "validation_mean_absolute_step_distance": 0.7333333333333333,
+      "parameters": "{'n_estimators': 150, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9, 'scale_pos_weight': 7.171428571428572}"
+    }
+  ],
+  "binary_metrics": {
+    "precision": 0.45,
+    "recall": 0.6,
+    "f1": 0.5142857142857142,
+    "pr_auc": 0.6753365518166231,
+    "roc_auc": 0.8764525993883792,
+    "threshold": 0.5,
+    "pr_auc_definition": "Average precision (non-interpolated precision-recall integral)"
+  },
+  "top_important_features": [
+    {
+      "feature": "numeric__previous_step_same_type",
+      "importance": 0.1283811628818512
+    },
+    {
+      "feature": "categorical__status_ERROR",
+      "importance": 0.09831567853689194
+    },
+    {
+      "feature": "numeric__previous_step_same_agent",
+      "importance": 0.07389942556619644
+    },
+    {
+      "feature": "numeric__has_error",
+      "importance": 0.07190988957881927
+    },
+    {
+      "feature": "numeric__output_length_chars",
+      "importance": 0.05696989968419075
+    },
+    {
+      "feature": "numeric__output_length_words",
+      "importance": 0.04970884695649147
+    },
+    {
+      "feature": "categorical__agent_id_wrong_agent",
+      "importance": 0.049311596900224686
+    },
+    {
+      "feature": "numeric__input_length_chars",
+      "importance": 0.047966863960027695
+    },
+    {
+      "feature": "categorical__agent_id_researcher",
+      "importance": 0.04747925326228142
+    },
+    {
+      "feature": "numeric__input_length_words",
+      "importance": 0.04637419804930687
+    },
+    {
+      "feature": "categorical__tool_name_calculator",
+      "importance": 0.04163685441017151
+    },
+    {
+      "feature": "numeric__previous_step_similarity",
+      "importance": 0.0411776602268219
+    },
+    {
+      "feature": "numeric__cumulative_handoffs",
+      "importance": 0.03854828700423241
+    },
+    {
+      "feature": "numeric__is_llm_step",
+      "importance": 0.0262481439858675
+    },
+    {
+      "feature": "categorical__tool_name_wrong_tool",
+      "importance": 0.024980442598462105
+    }
+  ],
+  "test_steps_matching_train": 120,
+  "test_positive_steps_matching_train": 15,
+  "warnings": [
+    "Small synthetic dataset; repeated templates, runtime sentinel values, payload sizes and missingness may encode injection patterns. Raw probabilities are uncalibrated and are not normalized across steps.",
+    "Step predictors use only observed local/prefix features. Final ranking uses the complete supplied trajectory; this does not implement early failure prediction.",
+    "120/124 test step feature vectors occur in training, including 15/15 positive steps. Distinct task IDs do not eliminate synthetic-template reuse.",
+    "Top observable categorical features include synthetic injection sentinels: categorical__agent_id_wrong_agent, categorical__tool_name_wrong_tool. These are runtime field values, not label columns, but may reveal injection patterns."
+  ],
+  "probabilities_calibrated": false
+}

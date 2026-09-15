@@ -1,0 +1,24 @@
+{
+  "explicit_leakage_columns": [],
+  "suspicious_observable_features": [],
+  "all_missing_training_features": [
+    "average_tool_latency_ms",
+    "max_tool_latency_ms",
+    "premature_termination_indicator",
+    "steps_since_last_successful_action",
+    "average_retrieval_confidence",
+    "minimum_retrieval_confidence",
+    "sender_receiver_similarity",
+    "handoff_information_loss_score",
+    "success_step_count",
+    "failed_step_count",
+    "failure_step_ratio"
+  ],
+  "warnings": [
+    "Small synthetic dataset: lengths, missingness, repeated actions and semantic scores can reveal injection patterns; metrics are prototype-only. Probabilities are uncalibrated.",
+    "Payload-size features account for 45.7% of selected-model importance. These observable sizes can encode synthetic injection signatures; inspect source feature definitions before generalizing.",
+    "13/15 test rows have exactly the same predictor vector as a training row despite distinct task IDs. Synthetic template reuse limits generalization claims."
+  ],
+  "post_selection_test_vectors_also_in_train": 13,
+  "payload_size_importance": 0.4571883242242908
+}

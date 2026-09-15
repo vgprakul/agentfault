@@ -1,0 +1,4 @@
+model,validation_exact_step_accuracy,validation_top3_accuracy,validation_mrr,validation_mean_absolute_step_distance,parameters
+Logistic Regression,0.4666666666666667,0.7333333333333333,0.6285714285714284,0.8666666666666667,{'C': 1.0}
+Random Forest,0.6,0.6666666666666666,0.7077777777777777,0.7333333333333333,"{'n_estimators': 250, 'max_depth': None, 'min_samples_leaf': 1, 'class_weight': 'balanced'}"
+XGBoost,0.6,0.8666666666666667,0.7244444444444444,0.7333333333333333,"{'n_estimators': 150, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9, 'scale_pos_weight': 7.171428571428572}"

@@ -1,0 +1,138 @@
+{
+  "loaded_rows": 100,
+  "usable_rows": 100,
+  "excluded_unlabelled_or_clean": 0,
+  "class_distribution": {
+    "train": {
+      "PLANNING": 13,
+      "TOOL": 14,
+      "KNOWLEDGE": 9,
+      "MULTI_AGENT": 14,
+      "CONTROL": 9,
+      "SECURITY": 11
+    },
+    "validation": {
+      "PLANNING": 1,
+      "TOOL": 3,
+      "KNOWLEDGE": 4,
+      "MULTI_AGENT": 3,
+      "CONTROL": 1,
+      "SECURITY": 3
+    },
+    "test": {
+      "PLANNING": 1,
+      "TOOL": 3,
+      "KNOWLEDGE": 2,
+      "MULTI_AGENT": 3,
+      "CONTROL": 5,
+      "SECURITY": 1
+    }
+  },
+  "split_counts": {
+    "train": 70,
+    "validation": 15,
+    "test": 15
+  },
+  "classes_trained": [
+    "CONTROL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "PLANNING",
+    "SECURITY",
+    "TOOL"
+  ],
+  "categories_absent": [],
+  "best_category_model": "Random Forest",
+  "selection_metric": "validation macro_f1",
+  "validation_macro_f1": {
+    "Logistic Regression": 0.753968253968254,
+    "Random Forest": 0.7777777777777777,
+    "XGBoost": 0.7777777777777777
+  },
+  "test_accuracy": 0.8666666666666667,
+  "test_macro_f1": 0.7583333333333333,
+  "test_weighted_f1": 0.8433333333333334,
+  "subtype_models_trained": [
+    "CONTROL",
+    "KNOWLEDGE",
+    "MULTI_AGENT",
+    "PLANNING",
+    "TOOL"
+  ],
+  "subtype_unavailable": {
+    "SECURITY": "Requires >=6 training rows, >=2 subtype classes and >=2 rows in every observed subtype"
+  },
+  "hierarchical_accuracy": 0.6666666666666666,
+  "routed_subtype_macro_f1": 0.375,
+  "routed_subtype_weighted_f1": 0.7,
+  "top_important_features": [
+    {
+      "feature": "numeric__average_step_output_length",
+      "importance": 0.14367958025665184
+    },
+    {
+      "feature": "numeric__total_output_chars",
+      "importance": 0.13606182120292765
+    },
+    {
+      "feature": "numeric__average_step_input_length",
+      "importance": 0.09496849036020905
+    },
+    {
+      "feature": "numeric__total_input_chars",
+      "importance": 0.08247843240450227
+    },
+    {
+      "feature": "numeric__avg_consecutive_step_similarity",
+      "importance": 0.035351987473854575
+    },
+    {
+      "feature": "numeric__semantic_drift_slope",
+      "importance": 0.03199022231328532
+    },
+    {
+      "feature": "numeric__total_input_words",
+      "importance": 0.03131327350737022
+    },
+    {
+      "feature": "numeric__total_output_words",
+      "importance": 0.027746795929894087
+    },
+    {
+      "feature": "numeric__total_steps",
+      "importance": 0.025868454817916206
+    },
+    {
+      "feature": "numeric__avg_task_step_similarity",
+      "importance": 0.02310020210369286
+    },
+    {
+      "feature": "numeric__handoffs_per_step",
+      "importance": 0.020014175034161266
+    },
+    {
+      "feature": "numeric__first_error_step_position",
+      "importance": 0.018203764174957865
+    },
+    {
+      "feature": "numeric__max_step_output_length",
+      "importance": 0.01771098006147563
+    },
+    {
+      "feature": "numeric__consecutive_identical_action_max",
+      "importance": 0.01651919875520382
+    },
+    {
+      "feature": "numeric__avg_semantic_drift",
+      "importance": 0.015766451251699048
+    }
+  ],
+  "test_vectors_also_in_train": 13,
+  "payload_size_importance": 0.4571883242242908,
+  "warnings": [
+    "Small synthetic dataset: lengths, missingness, repeated actions and semantic scores can reveal injection patterns; metrics are prototype-only. Probabilities are uncalibrated.",
+    "Payload-size features account for 45.7% of selected-model importance. These observable sizes can encode synthetic injection signatures; inspect source feature definitions before generalizing.",
+    "13/15 test rows have exactly the same predictor vector as a training row despite distinct task IDs. Synthetic template reuse limits generalization claims."
+  ],
+  "probabilities_calibrated": false
+}

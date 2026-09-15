@@ -1,0 +1,10 @@
+{
+  "faulty_trajectories": 15,
+  "exact_step_accuracy": 0.6,
+  "top3_accuracy": 0.9333333333333333,
+  "mrr": 0.7333333333333333,
+  "mean_absolute_step_distance": 0.8,
+  "top5_accuracy": 0.9333333333333333,
+  "top5_eligible_trajectories": 15,
+  "tie_rule": "probability descending, then step_index ascending"
+}

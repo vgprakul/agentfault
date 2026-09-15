@@ -1,0 +1,361 @@
+{
+  "best_model": "Logistic Regression",
+  "model_type": "Logistic Regression",
+  "parameters": {
+    "C": 0.1
+  },
+  "training_timestamp": "2026-09-15T14:14:56.340437+00:00",
+  "feature_count": 77,
+  "feature_names": [
+    "total_steps",
+    "total_agents",
+    "total_tool_calls",
+    "total_tool_responses",
+    "total_retrieval_steps",
+    "total_llm_steps",
+    "total_handoffs",
+    "total_retries",
+    "total_errors",
+    "unique_tools_used",
+    "unique_agents",
+    "tool_calls_per_step",
+    "retrievals_per_step",
+    "retries_per_step",
+    "errors_per_step",
+    "handoffs_per_step",
+    "tool_call_count",
+    "successful_tool_call_count",
+    "failed_tool_call_count",
+    "tool_success_rate",
+    "tool_error_count",
+    "duplicate_tool_call_count",
+    "repeated_same_arguments_count",
+    "consecutive_tool_failures_max",
+    "tool_result_missing_count",
+    "unique_tool_count",
+    "tool_diversity",
+    "average_tool_latency_ms",
+    "max_tool_latency_ms",
+    "repeated_action_count",
+    "repeated_tool_argument_count",
+    "consecutive_identical_action_max",
+    "retry_count",
+    "loop_indicator",
+    "premature_termination_indicator",
+    "max_repeated_sequence_length",
+    "steps_since_last_successful_action",
+    "retrieval_count",
+    "empty_retrieval_count",
+    "retrieval_failure_count",
+    "total_retrieved_text_length",
+    "average_retrieved_text_length",
+    "max_retrieved_text_length",
+    "average_retrieval_confidence",
+    "minimum_retrieval_confidence",
+    "agent_count",
+    "unique_agent_count",
+    "agent_switch_count",
+    "handoff_count",
+    "dominant_agent",
+    "dominant_agent_step_count",
+    "sender_receiver_similarity",
+    "handoff_information_loss_score",
+    "total_input_chars",
+    "total_output_chars",
+    "total_input_words",
+    "total_output_words",
+    "average_step_input_length",
+    "average_step_output_length",
+    "max_step_output_length",
+    "total_retrieved_chars",
+    "average_retrieved_chars",
+    "success_step_count",
+    "failed_step_count",
+    "error_step_count",
+    "failure_step_ratio",
+    "first_error_step_position",
+    "avg_task_step_similarity",
+    "min_task_step_similarity",
+    "final_task_step_similarity",
+    "avg_semantic_drift",
+    "max_semantic_drift",
+    "final_semantic_drift",
+    "semantic_drift_slope",
+    "avg_consecutive_step_similarity",
+    "min_consecutive_step_similarity",
+    "max_semantic_change"
+  ],
+  "class_mapping": {
+    "SUCCESS": 0,
+    "FAILURE": 1
+  },
+  "outcome_mapping": {
+    "SUCCESS": 0,
+    "PASS": 0,
+    "PASSED": 0,
+    "SUCCEEDED": 0,
+    "OK": 0,
+    "FAILURE": 1,
+    "FAIL": 1,
+    "FAILED": 1,
+    "ERROR": 1,
+    "PARTIAL_SUCCESS": 1
+  },
+  "validation_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": null,
+    "pr_auc": null,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 15,
+    "false_positive_rate": null,
+    "false_negative_rate": 0.0,
+    "threshold": 0.5,
+    "unavailable_metrics": {
+      "roc_auc": "Evaluated split has only one outcome class",
+      "pr_auc": "Single-class average precision is non-discriminative; reported unavailable",
+      "false_positive_rate": "No SUCCESS examples"
+    },
+    "per_class": {
+      "SUCCESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "FAILURE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 15.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      }
+    }
+  },
+  "selection_metric": "validation_failure_f1",
+  "default_threshold": 0.5,
+  "random_seed": 42,
+  "inputs": [
+    {
+      "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\trajectory_features.csv",
+      "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\split_manifest.csv",
+      "features_sha256": "41afbc21e2449fd9cfebd01633ef385e79fcab76bd91689b24476f28e30ffc05",
+      "manifest_sha256": "4770ad3adce7021d3660688b909396d81090e8e8d13812f671989b5d42a7580c"
+    },
+    {
+      "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\trajectory_features.csv",
+      "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\split_manifest.csv",
+      "features_sha256": "0b2f9aff42b35ebd08e9235bedc254cda0c939d50f152fb2ccf8921f467c7f47",
+      "manifest_sha256": "5fd4499bdf648e5240c4f745c0a4ca739285d1250f187ad1d27f7672c06b7a82"
+    }
+  ],
+  "data": {
+    "loaded_rows": 103,
+    "usable_samples": 103,
+    "excluded_outcomes": [],
+    "split_counts": {
+      "train": {
+        "samples": 73,
+        "SUCCESS": 3,
+        "FAILURE": 70
+      },
+      "validation": {
+        "samples": 15,
+        "SUCCESS": 0,
+        "FAILURE": 15
+      },
+      "test": {
+        "samples": 15,
+        "SUCCESS": 0,
+        "FAILURE": 15
+      }
+    },
+    "success_samples": 3,
+    "failure_samples": 100,
+    "split_integrity": {
+      "valid": true,
+      "number_of_overlaps": 0,
+      "overlap_examples": [],
+      "issues": [],
+      "manifest_trajectories": 103,
+      "split_trajectory_counts": {
+        "train": 73,
+        "validation": 15,
+        "test": 15
+      },
+      "split_task_counts": {
+        "test": 15,
+        "train": 71,
+        "validation": 15
+      }
+    },
+    "inputs": [
+      {
+        "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\trajectory_features.csv",
+        "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\split_manifest.csv",
+        "features_sha256": "41afbc21e2449fd9cfebd01633ef385e79fcab76bd91689b24476f28e30ffc05",
+        "manifest_sha256": "4770ad3adce7021d3660688b909396d81090e8e8d13812f671989b5d42a7580c"
+      },
+      {
+        "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\trajectory_features.csv",
+        "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\split_manifest.csv",
+        "features_sha256": "0b2f9aff42b35ebd08e9235bedc254cda0c939d50f152fb2ccf8921f467c7f47",
+        "manifest_sha256": "5fd4499bdf648e5240c4f745c0a4ca739285d1250f187ad1d27f7672c06b7a82"
+      }
+    ]
+  },
+  "weights": {
+    "negative_training_samples": 3,
+    "positive_training_samples": 70,
+    "scale_pos_weight": 0.04285714285714286
+  },
+  "training_trajectory_ids": [
+    "AF-0099_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0043_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0024_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0035_fault_CTRL_LOOP_step_5",
+    "AF-0045_fault_TOOL_WRONG_ARGUMENT_step_5",
+    "AF-0051_fault_MA_INCORRECT_HANDOFF_step_6",
+    "AF-0023_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0080_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0068_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0093_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0066_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0061_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0019_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0075_fault_CTRL_LOOP_step_5",
+    "AF-0077_fault_CTRL_EXCESSIVE_EXPLORATION_step_4",
+    "AF-0083_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0046_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0074_fault_MA_ROLE_OVERLAP_step_6",
+    "AF-0011_fault_MA_INCORRECT_HANDOFF_step_2",
+    "AF-0010_fault_KNOW_CONTEXT_TRUNCATION_step_4",
+    "AF-0009_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0042_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0097_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0047_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0017_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0064_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0081_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0048_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0027_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0060_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0040_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0003_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0056_fault_CTRL_PREMATURE_TERMINATION_step_7",
+    "AF-0073_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0091_fault_MA_INCORRECT_HANDOFF_step_6",
+    "AF-0079_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0067_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0016_fault_CTRL_PREMATURE_TERMINATION_step_7",
+    "AF-0044_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0057_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0039_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0006_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0033_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0021_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0069_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0041_fault_PLAN_MISSING_STEP_step_1",
+    "AF-0100_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0086_fault_TOOL_UNNECESSARY_CALL_step_5",
+    "AF-0088_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0038_fault_SEC_PROMPT_INJECTION_step_7",
+    "AF-0025_fault_TOOL_WRONG_ARGUMENT_step_5",
+    "AF-0020_fault_SEC_CROSS_USER_DATA_LEAKAGE_step_7",
+    "AF-0037_fault_CTRL_EXCESSIVE_EXPLORATION_step_3",
+    "AF-0059_fault_SEC_UNAUTHORIZED_ACTION_step_5",
+    "AF-0034_fault_MA_ROLE_OVERLAP_step_2",
+    "AF-0050_fault_KNOW_CONTEXT_TRUNCATION_step_7",
+    "AF-0049_fault_KNOW_CITATION_MISMATCH_step_7",
+    "AF-0092_fault_MA_INFORMATION_LOSS_step_6",
+    "AF-0008_fault_KNOW_RETRIEVAL_FAILURE_step_3",
+    "AF-0052_fault_MA_INFORMATION_LOSS_step_6",
+    "AF-0062_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0063_fault_PLAN_INVALID_DEPENDENCY_step_1",
+    "AF-0053_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0022_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0031_fault_MA_INCORRECT_HANDOFF_step_2",
+    "AF-0002_fault_PLAN_INCORRECT_SUCCESS_CRITERIA_step_1",
+    "AF-0084_fault_TOOL_WRONG_TOOL_step_5",
+    "AF-0007_fault_TOOL_FAILED_RECOVERY_step_5",
+    "AF-0013_fault_MA_MISSING_RESPONSIBILITY_step_2",
+    "AF-0071_fault_MA_INCORRECT_HANDOFF_step_2",
+    "traj_19bc05a7",
+    "traj_62829322",
+    "traj_bdfc12e2"
+  ],
+  "warnings": [
+    "Small dataset; probabilities are uncalibrated. Inspect observable text lengths and error counts for synthetic/template proxies.",
+    "Validation/test contain a single outcome. F1 cannot establish SUCCESS/FAILURE discrimination; ROC-AUC and PR-AUC are unavailable.",
+    "Multiple existing datasets combined without changing splits. Source/instrumentation differences may predict outcomes; inspect source confounding.",
+    "SUCCESS training examples cover fewer than two tasks; generalization cannot be established."
+  ],
+  "test_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": null,
+    "pr_auc": null,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 15,
+    "false_positive_rate": null,
+    "false_negative_rate": 0.0,
+    "threshold": 0.5,
+    "unavailable_metrics": {
+      "roc_auc": "Evaluated split has only one outcome class",
+      "pr_auc": "Single-class average precision is non-discriminative; reported unavailable",
+      "false_positive_rate": "No SUCCESS examples"
+    },
+    "per_class": {
+      "SUCCESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "FAILURE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 15.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      }
+    }
+  },
+  "threshold_discussion": {
+    "best_f1_threshold": 0.5,
+    "high_recall_threshold": 0.5,
+    "selection_note": "Validation-only discussion; default threshold remains 0.50 unless explicitly supplied"
+  }
+}

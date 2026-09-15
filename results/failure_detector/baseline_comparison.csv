@@ -1,0 +1,3 @@
+model,accuracy,precision,recall,f1
+Logistic Regression,1.0,1.0,1.0,1.0
+Training majority baseline,1.0,1.0,1.0,1.0

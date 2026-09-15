@@ -1,0 +1,181 @@
+{
+  "status": "limited_single_class_evaluation",
+  "best_model": "Logistic Regression",
+  "test_samples": 15,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "roc_auc": null,
+  "pr_auc": null,
+  "tn": 0,
+  "fp": 0,
+  "fn": 0,
+  "tp": 15,
+  "default_threshold": 0.5,
+  "evaluated_threshold": 0.5,
+  "data": {
+    "loaded_rows": 103,
+    "usable_samples": 103,
+    "excluded_outcomes": [],
+    "split_counts": {
+      "train": {
+        "samples": 73,
+        "SUCCESS": 3,
+        "FAILURE": 70
+      },
+      "validation": {
+        "samples": 15,
+        "SUCCESS": 0,
+        "FAILURE": 15
+      },
+      "test": {
+        "samples": 15,
+        "SUCCESS": 0,
+        "FAILURE": 15
+      }
+    },
+    "success_samples": 3,
+    "failure_samples": 100,
+    "split_integrity": {
+      "valid": true,
+      "number_of_overlaps": 0,
+      "overlap_examples": [],
+      "issues": [],
+      "manifest_trajectories": 103,
+      "split_trajectory_counts": {
+        "train": 73,
+        "validation": 15,
+        "test": 15
+      },
+      "split_task_counts": {
+        "test": 15,
+        "train": 71,
+        "validation": 15
+      }
+    },
+    "inputs": [
+      {
+        "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\trajectory_features.csv",
+        "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\split_manifest.csv",
+        "features_sha256": "41afbc21e2449fd9cfebd01633ef385e79fcab76bd91689b24476f28e30ffc05",
+        "manifest_sha256": "4770ad3adce7021d3660688b909396d81090e8e8d13812f671989b5d42a7580c"
+      },
+      {
+        "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\trajectory_features.csv",
+        "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\split_manifest.csv",
+        "features_sha256": "0b2f9aff42b35ebd08e9235bedc254cda0c939d50f152fb2ccf8921f467c7f47",
+        "manifest_sha256": "5fd4499bdf648e5240c4f745c0a4ca739285d1250f187ad1d27f7672c06b7a82"
+      }
+    ]
+  },
+  "validation_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": null,
+    "pr_auc": null,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 15,
+    "false_positive_rate": null,
+    "false_negative_rate": 0.0,
+    "threshold": 0.5,
+    "unavailable_metrics": {
+      "roc_auc": "Evaluated split has only one outcome class",
+      "pr_auc": "Single-class average precision is non-discriminative; reported unavailable",
+      "false_positive_rate": "No SUCCESS examples"
+    },
+    "per_class": {
+      "SUCCESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "FAILURE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 15.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      }
+    }
+  },
+  "threshold_discussion": {
+    "best_f1_threshold": 0.5,
+    "high_recall_threshold": 0.5,
+    "selection_note": "Validation-only discussion; default threshold remains 0.50 unless explicitly supplied"
+  },
+  "majority_baseline": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": null,
+    "pr_auc": null,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0,
+    "tp": 15,
+    "false_positive_rate": null,
+    "false_negative_rate": 0.0,
+    "threshold": 0.5,
+    "unavailable_metrics": {
+      "roc_auc": "Evaluated split has only one outcome class",
+      "pr_auc": "Single-class average precision is non-discriminative; reported unavailable",
+      "false_positive_rate": "No SUCCESS examples"
+    },
+    "per_class": {
+      "SUCCESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "FAILURE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 15.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 15.0
+      }
+    },
+    "majority_class": 1
+  },
+  "warnings": [
+    "Small dataset; probabilities are uncalibrated. Inspect observable text lengths and error counts for synthetic/template proxies.",
+    "Validation/test contain a single outcome. F1 cannot establish SUCCESS/FAILURE discrimination; ROC-AUC and PR-AUC are unavailable.",
+    "Multiple existing datasets combined without changing splits. Source/instrumentation differences may predict outcomes; inspect source confounding.",
+    "SUCCESS training examples cover fewer than two tasks; generalization cannot be established.",
+    "WARNING: near-perfect scores require proxy-leakage inspection; single-class test scores can be matched by an always-FAILURE baseline.",
+    "13/15 test feature vectors also occur in training.",
+    "Training source perfectly separates outcomes. Source is excluded, but instrumentation features can encode it indirectly; this is a concrete proxy-leakage risk."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "loaded_rows": 103,
+  "usable_samples": 103,
+  "excluded_outcomes": [],
+  "split_counts": {
+    "train": {
+      "samples": 73,
+      "SUCCESS": 3,
+      "FAILURE": 70
+    },
+    "validation": {
+      "samples": 15,
+      "SUCCESS": 0,
+      "FAILURE": 15
+    },
+    "test": {
+      "samples": 15,
+      "SUCCESS": 0,
+      "FAILURE": 15
+    }
+  },
+  "success_samples": 3,
+  "failure_samples": 100,
+  "split_integrity": {
+    "valid": true,
+    "number_of_overlaps": 0,
+    "overlap_examples": [],
+    "issues": [],
+    "manifest_trajectories": 103,
+    "split_trajectory_counts": {
+      "train": 73,
+      "validation": 15,
+      "test": 15
+    },
+    "split_task_counts": {
+      "test": 15,
+      "train": 71,
+      "validation": 15
+    }
+  },
+  "inputs": [
+    {
+      "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\trajectory_features.csv",
+      "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\split_manifest.csv",
+      "features_sha256": "41afbc21e2449fd9cfebd01633ef385e79fcab76bd91689b24476f28e30ffc05",
+      "manifest_sha256": "4770ad3adce7021d3660688b909396d81090e8e8d13812f671989b5d42a7580c"
+    },
+    {
+      "features": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\trajectory_features.csv",
+      "manifest": "C:\\Users\\PRAKUL\\OneDrive\\\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\\ChatGPT\\agentfault\\data\\features\\real\\split_manifest.csv",
+      "features_sha256": "0b2f9aff42b35ebd08e9235bedc254cda0c939d50f152fb2ccf8921f467c7f47",
+      "manifest_sha256": "5fd4499bdf648e5240c4f745c0a4ca739285d1250f187ad1d27f7672c06b7a82"
+    }
+  ]
+}

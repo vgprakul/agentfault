@@ -1,0 +1,8 @@
+model,parameters,validation_f1,validation_pr_auc,validation_recall
+Logistic Regression,{'C': 0.1},1.0,,1.0
+Logistic Regression,{'C': 1.0},1.0,,1.0
+Logistic Regression,{'C': 10.0},1.0,,1.0
+Random Forest,"{'n_estimators': 150, 'max_depth': 5, 'min_samples_split': 2, 'class_weight': 'balanced'}",1.0,,1.0
+Random Forest,"{'n_estimators': 250, 'max_depth': None, 'min_samples_split': 4, 'class_weight': 'balanced'}",1.0,,1.0
+XGBoost,"{'n_estimators': 100, 'max_depth': 2, 'learning_rate': 0.05, 'subsample': 0.9, 'colsample_bytree': 0.9}",1.0,,1.0
+XGBoost,"{'n_estimators': 150, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.9, 'colsample_bytree': 0.9}",1.0,,1.0

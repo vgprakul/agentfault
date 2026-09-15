@@ -1,0 +1,87 @@
+{
+  "suspicious_feature_names": [],
+  "test_vectors_matching_train": 13,
+  "training_source_outcome_counts": [
+    {
+      "source": "INJECTED",
+      "failure_label": 1,
+      "samples": 70
+    },
+    {
+      "source": "NATURAL",
+      "failure_label": 0,
+      "samples": 3
+    }
+  ],
+  "top_features": [
+    {
+      "feature": "numeric__total_handoffs",
+      "importance": 0.08846506503177144
+    },
+    {
+      "feature": "numeric__consecutive_tool_failures_max",
+      "importance": 0.08846506503177144
+    },
+    {
+      "feature": "numeric__handoff_count",
+      "importance": 0.08846506503177144
+    },
+    {
+      "feature": "numeric__failed_tool_call_count",
+      "importance": 0.08846506503177144
+    },
+    {
+      "feature": "numeric__total_tool_responses",
+      "importance": 0.08846506503177143
+    },
+    {
+      "feature": "numeric__tool_success_rate",
+      "importance": 0.08846506503177143
+    },
+    {
+      "feature": "numeric__successful_tool_call_count",
+      "importance": 0.08846506503177143
+    },
+    {
+      "feature": "numeric__average_step_input_length",
+      "importance": 0.08841766649090022
+    },
+    {
+      "feature": "numeric__total_output_words",
+      "importance": 0.08837628247173622
+    },
+    {
+      "feature": "numeric__total_input_words",
+      "importance": 0.08829118353757724
+    },
+    {
+      "feature": "numeric__total_input_chars",
+      "importance": 0.08785077136235712
+    },
+    {
+      "feature": "numeric__max_step_output_length",
+      "importance": 0.08734098698158756
+    },
+    {
+      "feature": "numeric__max_retrieved_text_length",
+      "importance": 0.0857895296406463
+    },
+    {
+      "feature": "numeric__average_retrieved_text_length",
+      "importance": 0.0857895296406463
+    },
+    {
+      "feature": "numeric__average_retrieved_chars",
+      "importance": 0.0857895296406463
+    }
+  ],
+  "warnings": [
+    "Small dataset; probabilities are uncalibrated. Inspect observable text lengths and error counts for synthetic/template proxies.",
+    "Validation/test contain a single outcome. F1 cannot establish SUCCESS/FAILURE discrimination; ROC-AUC and PR-AUC are unavailable.",
+    "Multiple existing datasets combined without changing splits. Source/instrumentation differences may predict outcomes; inspect source confounding.",
+    "SUCCESS training examples cover fewer than two tasks; generalization cannot be established.",
+    "WARNING: near-perfect scores require proxy-leakage inspection; single-class test scores can be matched by an always-FAILURE baseline.",
+    "13/15 test feature vectors also occur in training.",
+    "Training source perfectly separates outcomes. Source is excluded, but instrumentation features can encode it indirectly; this is a concrete proxy-leakage risk."
+  ]
+}

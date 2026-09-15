@@ -1,0 +1,6 @@
+split,threshold,precision,recall,f1,false_positive_rate,false_negative_rate
+validation,0.3,1.0,1.0,1.0,,0.0
+validation,0.4,1.0,1.0,1.0,,0.0
+validation,0.5,1.0,1.0,1.0,,0.0
+validation,0.6,1.0,1.0,1.0,,0.0
+validation,0.7,1.0,1.0,1.0,,0.0
